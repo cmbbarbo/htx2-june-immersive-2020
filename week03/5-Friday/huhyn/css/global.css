@@ -1,4 +1,7 @@
-
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
 body {
     margin: 0px;
 
@@ -33,4 +36,22 @@ body {
 
 .h500{
     height: 500px;
+}
+
+.Imageshadow{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.h250{
+    height: 250px;
+}
+.h600{
+    height: 600px;
+}
+
+.fontB{
+    font-size: 1.5rem;
+}
+.fontC{
+    font-size: 1.25rem;
 }
