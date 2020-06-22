@@ -1,6 +1,7 @@
 *{
     margin: 0;
     box-sizing: border-box;
+    /* font-family: 'Birdseye', sans-serif; */
 }
 body {
     margin: 0px;
@@ -49,9 +50,48 @@ body {
     height: 600px;
 }
 
+.h100{
+    height: 100px;
+}
+
 .fontB{
     font-size: 1.5rem;
 }
 .fontC{
     font-size: 1.25rem;
+}
+@media screen and (max-width: 768px){
+    .header{
+        height: 300px;
+    }
+    .mainHuynhText{
+        font-size: 64px;
+    }
+    .fontB{
+        font-size:1.25rem;
+    }
+    .fontC{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .header{
+        height: 200px;
+    }
+    .mainHuynhText{
+        font-size: 40px;
+    }
+    .homeImage{
+        height:250px;
+    }
+    .homeImageText{
+        height:250px;
+    }
+    .fontB{
+        font-size: 1rem;
+    }
+    .fontC{
+        font-size: .75rem;
+    }
 }
