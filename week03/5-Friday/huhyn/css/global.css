@@ -73,6 +73,18 @@ body {
     .fontC{
         font-size: 1rem;
     }
+    .contactMainText{
+        font-size: 64px;
+    }
+    .formHeader{
+        font-size: 2.75rem;
+    }
+    .contactHeader{
+        height: 300px;
+    }
+    .formHeaderD{
+        height:200px;
+    }
 }
 
 @media screen and (max-width: 576px){
@@ -93,5 +105,17 @@ body {
     }
     .fontC{
         font-size: .75rem;
+    }
+    .contactMainText{
+        font-size: 40px;
+    }
+    .formHeader{
+        font-size: 1.5rem;
+    }
+    .contactHeader{
+        height: 200px;
+    }
+    .formHeaderD{
+        height:150px;
     }
 }
