@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript </title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div id="page">
+      <h1></h1>
+      <h2>New Account</h2>
+      <form method="post" action="#">
+
+        <label for="username">Create a username: </label>
+        <input type="text" id="username" />
+        <div id="feedback">
+
+        </div>
+
+        <label for="password">Create a password: </label>
+        <input type="password" id="password" />
+
+        <input type="submit" value="sign up" />
+
+      </form>
+    </div>
+
+    <script>
+      const usernameField = document.querySelector("#username");
+      const feedbackField = document.querySelector('#feedback');
+      const minUserLength = 8;
+
+      usernameField.addEventListener('blur', (e) => {
+        const userNamelength = e.target.value.length;
+        console.log(userNamelength);
+        if(userNamelength < minUserLength){
+          feedbackField.textContent = `Username must be at least ${minUserLength} characters long`;
+        }else{
+          feedbackField.textContent = "";
+        }
+      });
+    </script>
+
+  </body>
+</html>
