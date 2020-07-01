@@ -9,19 +9,27 @@ var obj = {
     z: 3
 }
 
+mult = (obj) => {
+    var{x,y,z} = obj;
+    return x * y * z;
+}
 console.log(mult(obj));
 //300
 
 
 /*
-Create shortPerson() function that will destructure each person object.
+Create Person() function that will destructure each person object.
 Sample result:
 {n: "Mike", c: "Spain", a: 23, p:100}
 
 If input object doesn't have postsQuantitiy field it should get default value 0.
 */
 
-
+let person = obj => {
+    var {name: n,info: {},postsQuantity: p} = obj;
+    console.log(`name ${name}, info: `)
+    
+}
 var person1 = {
     name: "Mike",
     info: {
@@ -38,4 +46,6 @@ var person2 = {
         age: 25
     }
 }
+
+console.log(person(person1));
 
