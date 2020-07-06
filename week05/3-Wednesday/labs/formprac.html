@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            color: purple;
+            font-size: 60px;
+
+        }
+    </style>
+</head>
+<body>
+<!-- <form action="" method="GET">
+
+    <fieldset>
+        <legend>Corona Virus Survey</legend>
+    <label for="">first name</label>
+    <input id="fName" type="text" name="firstName" required>
+    <br> -->
+
+    <!-- <label for="">Do you have covid-19?</label>
+    <input type="radio" name="rona">
+    <br>
+
+    <label for="">Do you have Insurance</label>
+    <input type="checkbox" name="insurance">
+    <br>
+
+    <label for="">Email Address</label>
+    <input type="email" name="email" id="email" required>
+    <br>
+
+    <label for="">NUmber</label>
+    <input type="number" min="1" max="10">
+    <br> -->
+
+
+    <!-- <label for="">Password</label>    
+    <input type="password" name="pwd" required minlength="6" maxlength="10">
+    <br>
+
+    <label for="">Pattern: enter html or css</label>    
+    <input type="text" pattern="css|html">
+    <br> -->
+
+    
+    
+    <!-- <input type="submit" >
+
+</fieldset>
+api.openweathermap.org/data/2.5/weather?q=houston&appid=949e47da5c633330a239053d53c767ee
+</form> -->
+<!-- <form id="myForm">
+    Enter name: 
+    <input name="brand" type="radio" value="volvo">
+    <input name="brand" type="radio" value="saab">
+    <input name="brand" type="radio" value="bmw">
+    <input type="submit">
+  </form> -->
+<div>
+
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script>
+    // $(()=>{
+    //     // $('form').submit((e)=>{
+    //     //     e.preventDefault();
+    //     //     // alert($('#fName').val());
+    //     //     console.log($('input:checked').val());
+    //     // })
+
+    //     $.get('https://corona.lmao.ninja/v2/states')
+    //     .done(data =>{
+    //         console.log(data);
+    //         let htmlArr = data.map(stateObj =>{
+    //             return `<li>${stateObj.state} - ${stateObj.cases}</li>`
+    //         })
+    //         $('ul').html(htmlArr.join(""));
+    //     })
+    //     .then(error =>{
+    //         console.log(error);
+    //     })    
+        
+    // })
+
+    fetch('http://api.openweathermap.org/data/2.5/weather?q=houston&appid=949e47da5c633330a239053d53c767ee')
+    .then(response => response.json())
+    .then(data => {
+        console.log(data.main.temp);
+        let kelvin = data.main.temp;
+        let degC = kelvin - 273.15;
+        let degCInt = Math.floor(degC);
+        console.log(degC);
+        console.log(degCInt);
+
+        let degF = (degC * 1.8) + 32;
+        let degFInt = Math.floor(degF);
+        console.log(degF);
+        console.log(degFInt);
+
+        let div = document.querySelector('div');
+        div.textContent = `Current Temperature: ${degFInt}F`
+    })
+    .catch(error => {
+        console.log(error);
+    })
+
+</script>
+
+    <!-- <script>
+        let email = document.querySelector('#email');
+        email.addEventListener('input', (e) =>{
+            if(email.validity.type){
+                email.setCustomValidity('I expect an email!');
+            }else{
+                email.setCustomValidity("");
+            }
+        })
+    </script> -->
+</body>
+</html>
